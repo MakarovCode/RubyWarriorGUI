@@ -57,6 +57,8 @@ gem 'mini_magick'
 gem 'carrierwave'
 gem 'fog-aws'
 
+gem 'whenever'#, :require => false
+
 gem 'kaminari'
 
 gem 'gravatar_image_tag'
