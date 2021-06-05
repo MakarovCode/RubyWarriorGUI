@@ -20,6 +20,11 @@ This is a Graphic implementation of the infamous Ruby command-line game RubyWarr
 * PostgreSQL;
     * 13;
 
+# SOME SCREENSHOTS
+![screen1](https://rubywarrior.geekoi.com/rw1.png)
+![screen2](https://rubywarrior.geekoi.com/rw2.png)
+![screen3](https://rubywarrior.geekoi.com/rw3.png)
+
 
 # HOW TO INSTALL
 
