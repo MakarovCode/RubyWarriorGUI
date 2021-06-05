@@ -38,3 +38,6 @@ rails db:create db:migrate db:seed
 
 # Type localhost:3000
 ```
+
+# DISCLAIMER
+I DO NOT give support to this project any more, you are free to use the code in anyway you want, is free to use, but this web application as it is may present Bugs and Errors.
