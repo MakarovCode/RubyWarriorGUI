@@ -7,7 +7,10 @@ This is a Graphic implementation of the infamous Ruby command-line game RubyWarr
 # HONORS
 [Original Game and Repo](https://github.com/ryanb/ruby-warrior) - RubyWarrior by ryanb
 
-# TECHNOLOGIES USED
+# TECHNOLOGIES USED AND CHALLENGES
+* RubyWarrior Gem Modification
+    * I had to make several changes to the ruby classes of the original RubyWarrior gem in order to be able to call it from an API and AJAX Calls.
+    * I had to make with AngularJS a "Animator" that responded to the RubyWarrior command-line like input and outputs
 * Ruby;
     * Version 2.7.1;
 * Rails;
