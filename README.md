@@ -2,7 +2,7 @@
 This is a Graphic implementation of the infamous Ruby command-line game RubyWarrior using Ruby on Rails.
 
 # DEMO
-[RubyWarrior GUI](https://rubywarrior.geekoi.com/) - Play the game
+[RubyWarrior GUI](https://rubywarrior.geekoi.com/rubywarrior/warriors) - Play the game
 
 # HONORS
 [Original Game and Repo](https://github.com/ryanb/ruby-warrior) - RubyWarrior by ryanb
