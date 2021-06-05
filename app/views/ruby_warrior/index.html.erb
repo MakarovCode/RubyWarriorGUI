@@ -1,0 +1,7 @@
+<ul>
+	<li><%= "pid        : #{ @pid }" %></li>
+	<li><%= "stdout     : #{ @stdout.read.strip }" %></li>
+	<li><%= "stderr     : #{ @stderr.read.strip }" %></li>
+	<li><%= "status     : #{ @status.inspect }" %></li>
+	<li><%= "exitstatus : #{ @status.exitstatus }" %></li>
+</ul>

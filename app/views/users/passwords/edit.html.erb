@@ -1,0 +1,31 @@
+<div class="row">
+	<div class="col-md-6">
+		<%= render "layouts/tutorials_list" %>
+	</div>
+	<div class="col-md-6 row">
+		<div class="page-header">
+		  <h1>Cambia tu Constrase&ntilde;a</h1>
+		</div>
+		<div class="col-md-6">
+			<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+				<%= f.hidden_field :reset_password_token %>
+			  <div>
+			    <%= f.password_field :password, autocomplete: "off", class: "form-control input-lg", placeholder: "Contrasena" %>
+			  </div>
+				<br />
+			  <div>
+			    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control input-lg", placeholder: "Confirma tu Contrasena" %>
+			  </div>
+				<br />
+			  <div>
+			  	<button type="submit" class="btn btn-lg btn-block btn-primary">Cambiar Constrase&ntilde;a</button>
+			  </div>
+			<% end %>
+
+			<%= render "users/shared/links" %>
+		</div>
+		<div class="col-md-6">
+			<%= render "users/shared/social"%>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,45 @@
+<div class="row" ng-app="holamundo" ng-controller="TutorialController as tutoCtrl">
+
+	<h6><div class="ui top attached tabular menu visible-xs" align="center">
+    	<a class="active item" data-tab="tutoriales">Tutoriales</a>
+    	<a class="item" data-tab="user"> Usuario </a>
+    </div></h6>
+
+    <!-- LISTA DE LOS TUTORIALES EXISTENTES -->
+	<div class="hidden-xs col-sm-6 col-md-7 col-lg-8" >
+		<%= render "layouts/tutorials_list"%>
+	</div>
+
+	<div class="col-md-8 ui bottom attached active tab segment hidden-sm hidden-md hidden-lg top-xs" data-tab="tutoriales">
+		<div class="visible-xs">
+			<%= render "layouts/tutorials_list"%>
+		</div>
+	</div>
+
+	<!-- CARD DE USUARIO Y FORM DE USURIO  -->
+	<div class="hidden-xs">
+		<%= render "form_user" %>
+	</div>
+
+	<div class="ui bottom attached tab segment hidden-sm hidden-md hidden-lg top-xs" data-tab="user">
+		<div class="visible-xs">
+			<%= render "form_user" %>
+		</div>
+	</div>
+
+
+	
+</div>	
+<script>
+     
+</script>
+
+<!-- if (data_for_level.rubywarrior_tower_id >= 3) && !user_signed_in?
+        redirect_to tutorials_path
+
+        session[:level] = @level
+        session[:game_warrior] = @game_warrior
+        session[:data_for_level] =  data_for_level;
+        session[:path] =  path;     
+        session[:templates_path] = templates_path
+end -->

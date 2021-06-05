@@ -1,0 +1,33 @@
+<div class="row container-warrior">
+	<div class="col-md-8 col-md-offset-2">
+		
+		<div class="row ">
+			<div class="top-xs col-md-12" >
+				<span class="letter-new letter-ruby">
+					Toda leyenda tiene un gran nombre<br />
+					Con cuidado, no sea que despues ¡te arrepientas!
+				<span>
+			</div>
+		</div>
+		
+		<%= form_for @warrior, url: {controller: "rubywarrior/warriors"} do |f| %>
+		<div class="row" style="margin-top:50px">	
+			<div class="col-md-12">
+				<%= f.text_field :name, :placeholder=>"Nombre", class:"form-control input-warrior", style:"text-shadow: 2px 2px 2px #333" %>
+			</div>
+		</div>
+
+		<div style="margin-top:20px">
+			<%= image_tag "rubywarrior/warriors/1/s1.png", :class=> "image-warrior-ppal"%>
+		</div>	
+		
+		<div class="row">
+			<div class="col-md-12">				
+				<button type="submit" class="ui inverted red icon button massive letter-ruby" id="hvr">
+					<i style="margin-right: 15px;"><%= image_tag "rubywarrior/warriors/1/e1.png", style: "width: 35px" %></i>Empezar la aventura
+				</button>
+			</div>
+		</div>
+		<% end %>
+	</div>
+</div>

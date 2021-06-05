@@ -1,0 +1,31 @@
+<div class="row">
+	<h6><div class="ui top attached tabular menu visible-xs" align="center">
+		<a class="active item" data-tab="tutoriales">Tutoriales</a>
+		<a class="item" data-tab="registro"> Registro </a>
+	</div></h6>
+
+	<div class="hidden-xs col-md-5 col-sm-4">
+		<%= render "layouts/tutorials_list" %>
+	</div>
+
+	<div class="ui bottom attached active tab segment hidden-lg hidden-md hidden-sm top-xs" data-tab="tutoriales">
+		<div class="visible-xs">
+			<%= render "layouts/tutorials_list" %>
+		</div>
+	</div>
+
+
+	<div class="hidden-xs">
+		<%= render "form_new" %>
+	</div>
+
+	<div class="ui bottom attached tab segment hidden-lg hidden-md hidden-sm top-xs" data-tab="registro">
+		<div class="visible-xs">
+			<%= render "form_new" %>	
+		</div>
+	</div>	
+</div>
+
+<script>
+	$('.menu .item').tab();
+</script>

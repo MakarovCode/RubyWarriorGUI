@@ -1,0 +1,49 @@
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<!-- <form class="form-horizontal"> -->
+		<%= form_for @contact, :html => {class: "form-horizontal", :id => 'form_id'}, url: {controller: "/publics", action: "create_contact" } do |f| %>
+
+		<h1 class="ui horizontal header divider titles-teal">Contactenos</h1>
+		
+		<div class="colum">
+			<div class="ui raised segment">
+
+			
+				<a class="ui teal ribbon label bottom">Asunto</a>
+				<%= f.select(:issue,{"" => [["Solicitud asesoria", "solicitud"], ["Sugerencia", "sugerencia"], ["Felicitaciones", "felicitaciones"]]}, {}, class: "form-control", id: "issue", required: "" ) %>
+			
+				<br/>
+
+				<a class="ui teal ribbon label bottom">Email</a>
+				<%= f.text_field :email, placeholder: "Email", id: 'field_document', class: "form-control input-md", required: "" %>
+
+				<br/>
+
+				<a class="ui teal ribbon label bottom">Nombre</a>
+				<%= f.text_field :name, placeholder: "Nombre", id: 'name_id', class: "form-control input-md", required: ""  %>
+
+				<br/>
+
+				<a class="ui teal ribbon label bottom">Teléfono</a>
+				<%= f.text_field :phone, placeholder: "Teléfono", id: 'phone_id', class: "form-control input-md" %>
+
+				<br/>
+
+				<a class="ui teal ribbon label bottom">Comentario</a>
+				<%= f.text_area :description, placeholder: "Describe tu comentario", id: 'description_id', class: "form-control", required: ""  %>
+
+				<br/>
+
+				<button type="submit" id="singlebutton" name="singlebutton" class="ui inverted blue button">Enviar
+				 	<i class="send icon" style="margin-left: 5px"></i>
+				</button>
+
+			</div>
+		</div>
+		<% end %>
+	</div>
+
+	<!-- <div class="col-md-6">
+		<h1>Modal Google maps</h1>
+	</div>	 -->
+</div>

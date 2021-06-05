@@ -1,0 +1,2 @@
+module RubyWarriorHelper
+end

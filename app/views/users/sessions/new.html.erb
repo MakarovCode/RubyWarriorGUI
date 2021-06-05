@@ -1,0 +1,32 @@
+<div class="row">
+	<h6>
+		<div class="ui top attached tabular menu visible-xs" align="center">
+			<a class="item" data-tab="tutoriales">Tutoriales</a>
+			<a class="active item" data-tab="sesion"> Inicie Sesión </a>
+		</div>
+	</h6>
+
+	<div class="hidden-xs col-md-5 col-sm-5">
+		<%= render "layouts/tutorials_list" %>
+	</div>
+
+	<div class="ui bottom attached tab segment hidden-sm hidden-md hidden-lg top-xs" data-tab="tutoriales">
+		<div class="visible-xs">
+			<%= render "layouts/tutorials_list" %>
+		</div>
+	</div>
+
+	<div class="hidden-xs">
+		<%= render "session_new" %>
+	</div>
+
+	<div class="ui bottom active attached tab segment hidden-sm hidden-md hidden-lg top-xs " data-tab="sesion">
+		<div class="visible-xs">
+			<%= render "session_new" %>
+		</div>
+	</div>
+</div>
+
+<script>
+	$('.menu .item').tab();
+</script>

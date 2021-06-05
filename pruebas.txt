@@ -1,0 +1,67 @@
+- Validar de que al cerrar session en otra pestaña no se muestre error en las demas vistas al recargar la página
+
+- Poner una vista en commun cuando se accede a una url no encontrada
+
+- Cuando escribo la contraseña mal, en el formulario de actualizar datos carga un error en la vista
+
+
+  def update
+    params.permit!
+    puts "======="+params.to_s
+    puts "=======ID======="+params[:user][:current_password].to_s
+    user = User.find(params[:id])
+    
+    if user.valid_password?(params[:user][:current_password])
+      params[:user].delete :current_password
+      params[:user].delete :password_confirmation
+      params[:user].delete :password
+      puts "======params===="+params[:user].to_s
+      # params[asdasdasd]
+      user.update_attributes(params[:user])
+      # user.update(params[:user])
+      redirect_to tutorials_path, :notice => "Perfil actualizado correctamente!"
+
+    end
+    # if user.save
+                  
+    # else
+    #     redirect_to tutorials_path(), :alert => "Datos no guardados!"
+    # end    
+    
+  end
+
+
+
+
+  update_simon
+    def update
+    params.permit!
+    @user = User.find(params[:id])
+    
+    if @user.valid_password?(params[:user][:current_password])
+      params[:user].delete :current_password  
+           
+      if params[:user][:password].nil?
+        params[:user].delete :password 
+        params[:user].delete :password_confirmation 
+        valid_password = true
+      elsif params[:user][:password] == params[:user][:password_confirmation]
+        valid_password = true
+      else
+        valid_password = false
+      end      
+      
+      if valid_password
+        if @user.update_attributes(params[:user])
+          redirect_to tutorials_path, :notice => "Perfil actualizado correctamente!"
+        else
+          redirect_to tutorials_path, :notice => "Verifica tus datos" 
+        end
+      else
+        redirect_to tutorials_path, notice: "Las claves no coinciden"
+      end
+    else
+      redirect_to tutorials_path, notice: "Debes escribir tu clave actual"
+
+    end
+  end

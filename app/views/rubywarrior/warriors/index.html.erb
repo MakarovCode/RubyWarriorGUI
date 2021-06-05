@@ -1,0 +1,63 @@
+<div class="row container-warrior">
+	<div class="col-md-12 col-xs-12" align="center">
+		<h1 class="title-warrior">RUBY WARRIOR</h1>
+
+		<% if user_signed_in? %>
+
+			<% current_user.rubywarrior_players.each do |warrior| %>
+					<%#= puts("=============================================="+warrior) %>
+				<% if !warrior.rubywarrior_player_towers.last.nil? %>
+					<% level_id = warrior.rubywarrior_player_towers.last %>
+				<% end %>
+
+				<%= link_to rubywarrior_warrior_level_path(warrior, level_id.rubywarrior_tower_id), :"data-turbolinks" => false  do %>
+					<table class="ui padded table table-select-ruby" align="center">
+						<thead>
+						</thead>
+
+						<tbody >
+							<tr id="ensayo">
+								<td align="center">
+									<%= image_tag "rubywarrior/warriors/1/s1.png", class: "image-select-warrior"%>
+								</td>
+								<td class="name-warriors">
+									<%= warrior.name %>
+									<span class="lvl-warrior">
+										Lv.  <%= level_id.rubywarrior_tower_id %>
+									</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				<% end %>
+			<% end %>
+
+			<% if current_user.rubywarrior_players.empty? %>
+				<div>
+					<%= image_tag "rubywarrior/warriors/1/s1.png", class: "image-warrior-ppal" %>
+				</div>
+				<div style="margin: 2px 0px 15px 0px; ">
+					<%= link_to new_rubywarrior_warrior_path, class: "ui red inverted icon button massive letter-ruby", id: "hvr" do %>
+						<i> <%= image_tag "rubywarrior/warriors/1/e1.png", style: "width: 35px" %></i> Comienza la Aventura
+					<% end %>
+				</div>
+			<% else %>
+				<div style="margin: 10px 0px 15px 0px;">
+					<%= link_to new_rubywarrior_warrior_path, class: "ui red inverted icon button massive letter-ruby", id: "hvr" do %>
+						<i> <%= image_tag "rubywarrior/warriors/1/e1.png", style: "width: 35px" %></i> Crear Nuevo Warrior
+					<% end %>
+				</div>
+			<% end %>
+
+		<% else %>
+			<div>
+				<%= image_tag "rubywarrior/warriors/1/s1.png", class: "image-warrior-ppal"%>
+			</div>
+			<div style="margin: 2px 0px 15px 0px; ">
+				<%= link_to new_rubywarrior_warrior_path, class: "ui red inverted button massive letter-ruby", style: "hvr" do %>
+					<i> <%= image_tag "rubywarrior/warriors/1/e1.png", style: "width: 35px" %></i> Comienza la Aventura
+				<% end %>
+			</div>
+		<% end %>
+	</div>
+</div>

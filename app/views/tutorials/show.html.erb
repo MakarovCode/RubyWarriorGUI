@@ -1,0 +1,79 @@
+<div class="row">
+
+	<div class="col-md-2 hidden-xs hidden-sm" id="tutorial-sidemenu">
+		<div class="page-header">
+			<h1 class="titles-blue">P&aacute;gina <%= if params[:page] then params[:page] else "1" end  %></h1>
+		</div>
+		<ul class="list-group">
+			<li class="list-group-item"><a href="#objective">Objetivo</a></li>
+			<% @pages.each do |page| %> 
+				<li class="list-group-item"><a href="#page-<%=page.id%>"><%= page.title %></a></li>
+			<% end %>
+		</ul>
+		<hr />
+		<b>P&aacute;ginas</b><br />
+		<%= paginate @pages %>
+	</div>
+
+	<div class="col-md-offset-3 col-md-9">
+		<div class="page-header">
+			<h1 class="titles-blue"><%= @tutorial.title %> <small><%= @tutorial.version %></small><br /><small><%= @tutorial.created_at.strftime("%B %d, %Y") %></small></h1>
+		</div>
+		<div class="versions">
+			<% @tutorial.category_tutorials.each do |cat_tuto| %>
+				<span class="label label-primary"><%= cat_tuto.category.name %> - <%= cat_tuto.version %></span>
+			<% end %>
+		</div>
+		<br />
+		<div class="jumbotron" id="objective">
+			<h3>Objetivo!</h3>
+			<p><%= @tutorial.objective %></p>
+		</div>
+		<br />
+		<% @pages.each do |page| %>
+			<div class="jumbotron" id="page-<%=page.id%>">
+				<h3><%= page.title %></h3>
+				<p><%= raw page.content %></p>
+			</div>
+		<% end %>
+	</div>
+	
+	<button class="btn btn-primary btn-lg show-comments visible-xs visible-sm"><i class="glyphicon glyphicon-tasks"></i></button>
+
+	<!-- <button class="btn btn-danger btn-lg write-comment" data-toggle="modal" data-target="#write-comment-modal" ><i class="glyphicon glyphicon-pencil"></i></button> -->
+
+	
+	<div class="visible-xs visible-sm">
+		<button class="btn btn-primary btn-lg show-two-comments" id="hide-comments"><i class="glyphicon glyphicon-tasks"></i></button>
+	</div>
+
+	<!-- <button class="btn btn-primary btn-lg show-comments" id="hide-comments"><i class="glyphicon glyphicon-comment"></i></button> -->
+
+	
+ 	<div class="visible-xs visible-sm">
+		<div id="tutorial-comments" align="center">
+
+			<div class="page-header" id="append-comment-next-to">
+				<h1 class="title-pagination">P&aacute;gina <%= if params[:page] then params[:page] else "1" end  %></h1>
+			</div>
+			<ul class="list-group" style="width:300px">
+				<a class="list-group-item" href="#objective">Objetivo</a>
+				<% @pages.each do |page| %> 				
+				<a href="#page-<%=page.id%>" class=" list-group-item" ><%= page.title %></a>
+				<% end %>
+			</ul>
+			<hr />
+			<b style="color:black">P&aacute;ginas<br />
+			<%= paginate @pages %></b>
+		</div>
+	</div>
+			
+<!--FUERA ROW-->
+
+<div id="modal_ajax_edit">
+</div>
+<script>
+	CodigoEs.tutorialShow();
+	CodigoEs.comment();
+	//CodigoEs.edit_comment();
+</script>

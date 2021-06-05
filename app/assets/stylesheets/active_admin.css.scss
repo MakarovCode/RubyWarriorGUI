@@ -1,0 +1,36 @@
+@import 'activeadmin_addons/all';
+
+@import "active_admin/mixins";
+@import "active_admin/base";
+@import 'font_awesome5_webfont';
+
+$skinLogo: url("admin_logo.png") no-repeat 0 0;
+
+
+$skinActiveColor: #7774e7; //Morado oscuro
+$skinHeaderBck: #002744; //Azul oscuro
+$panelHeaderBck: #888da8; //Morado claro
+
+$pending-color: #FF9900;
+$rejected-color: #FF0000;
+$approved-color: #08A510;
+
+.status_tag {
+  &.inactivo { background: $pending-color; }
+  &.activo { background: $approved-color; }
+}
+
+@import "active_skin";
+
+#header h1.site_title {
+    background-size: auto 45px !important;
+}
+
+.openclose legend span{
+  cursor: pointer;
+}
+
+.openclose legend span:hover{
+  background-color: #7774e7;
+  color: white;
+}

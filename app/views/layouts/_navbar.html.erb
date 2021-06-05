@@ -1,0 +1,87 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button> -->
+        <a class="navbar-brand" href="javascript:void(0)"><%= image_tag "logotype-white-bg.png", width: 200, height: 35%></a>
+    </div>
+		<% if user_signed_in? %>
+
+
+
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="hidden-xs">
+          <%= link_to "Ruby Warrior", rubywarrior_warriors_path, :class=> "ui inverted black button space-top", style: "box-shadow: 0px 0px 0px 2px #333 inset !important;" %>
+        </li>
+        <li class="hidden-xs">
+        </li>
+        <div class="ui section divider visible-xs" style="margin:0px;"></div>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ff6600;" align="center"><%= current_user.email %> <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Tutoriales", tutorials_path %></li>
+            <li class="divider visible-xs"></li>
+            <li class="visible-xs"><%= link_to "Ruby Warrior", rubywarrior_warriors_path %></li>
+            <li class="divider visible-xs "></li>
+            <li class="divider"></li>
+            <li><%= link_to destroy_user_session_path, {method: :delete} do%><i class="glyphicon glyphicon-off"></i> Salir<% end %></li>
+
+          </ul>
+        </li>
+
+      </ul>
+		<% else %>
+      <ul class="nav navbar-nav navbar-right" >
+        <div class="ui buttons space-top hidden-xs" style="margin-bottom: 6px !important;">
+          <%= link_to "Bienvenido!", root_path, :class=> "ui inverted blue button space-button" %>
+          <%= link_to "Ruby Warrior", rubywarrior_warriors_path, :class=> "ui inverted black button space-button", style: "box-shadow: 0px 0px 0px 2px #333 inset !important;" %>
+
+          <%= link_to "Ingresar", root_path, :class=> "ui inverted yellow button"%>
+          <div class="or" data-text="o"></div>
+          <%= link_to "Registrarme", new_registration_path(User), class: "ui inverted orange button" %>
+        </div>
+
+        <div class="visible-xs" style="">
+          <ul class="nav navbar-nav navbar-right">
+            <div class="ui section divider" style="margin:0px;"></div>
+            <li class="dropdown" align="center">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ff6600;"> Bienvenido <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Tutoriales", "/tutorials" %></li>
+                <li class="divider"></li>
+                  <li> <%= link_to "Ruby Warrior", rubywarrior_warriors_path %> </li>
+                <li class="divider"></li>
+                <li class="divider"></li>
+                  <li class=""><%= link_to "Ingresar", "/tutorials" %> </li>
+                <li class="divider"></li>
+                  <li class="">  <%= link_to "Registrarme", new_registration_path(User)%> </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+      </ul>
+		<% end %>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+ <!-- <ul class="nav navbar-nav navbar-right">
+        <li class="">
+          <%#= link_to "Bienvenido!", root_path, style: "color: #FFFFFF;" %>
+        </li>
+        <li class="">
+          <%#= link_to "Ingresar", root_path, style: "color: #FFFF00;" %>
+        </li>
+        <li class="">
+          <%#= link_to "Registrarme", new_registration_path(User), style: "color: #FF6600;" %>
+        </li>
+      </ul> -->

@@ -1,0 +1,127 @@
+<div class="row game" ng-app="rubywarrior" ng-controller="LevelController as levelCtrl" ng-init="levelCtrl.initVariables(<%= @level.to_json(include: :rubywarrior_tower_units) %>, <%= @warrior.to_json %>, <%= @game_warrior.to_json%>)" id="game">
+  <div class="top-play-warriors col-md-12" style="margin-bottom:70px;">
+    <p class="level-warrior-name letter-ruby shadow"><%= @warrior.name %><spane class="level-title"><%=" "+@level.name %></p>
+
+      <p class="level-description letter-normal min_shadow"><%= raw @level.description %></p>
+      <p class="level-tip letter-normal min_shadow">Consejo: <%= raw @level.tip %></p>
+      <p class="level-clue letter-normal min_shadow">Pista: <%= raw @level.clue %></p>
+    </div>
+
+    <div class="col-md-12 game-screen" id="game-scene">
+
+      <% (1..@level.size_height).each do |y| %>
+      <% (1..@level.size_width).each do |x| %>
+      <% if x == 1 %>
+      <div class="wall" data-x="0" data-y="<%= y %>">
+        <%= image_tag "/rubywarrior/levels/floor_.png", class: "part2" %>
+        <%= image_tag "/rubywarrior/levels/wall.png", class: "part1" %>
+      </div>
+      <% end %>
+      <div class="floor" data-x="<%= x %>" data-y="<%= y %>">
+        <%= image_tag "/rubywarrior/levels/floor2.png" %>
+      </div>
+      <% if x == @level.size_width %>
+      <div class="wall" data-x="<%= x+1%>" data-y="<%= y %>">
+        <%= image_tag "/rubywarrior/levels/floor_.png", class: "part2" %>
+        <%= image_tag "/rubywarrior/levels/wall.png", class: "part1" %>
+      </div>
+      <% end %>
+      <% end %>
+      <% end %>
+
+      <div class="stairs" data-x="<%= @level.stairs_x+1%>" data-y="<%= @level.stairs_y+1 %>">
+        <%= image_tag "/rubywarrior/levels/stairs.png" %>
+      </div>
+
+      <div class="unit" ng-repeat="unit in levelCtrl.game.level.rubywarrior_tower_units" data-x="{{unit.pos_x+1}}" data-y="{{unit.pos_y}}" id="unit-{{unit.id}}" repeat-complete="levelCtrl.setUnitsReady()">
+        <img ng-src="/rubywarrior/{{unit.name}}/{{unit.direction}}1.png"/>
+      </div>
+
+      <div class="warrior" ng-init="levelCtrl.setWarriorReady(levelCtrl.game.warrior.pos_x+1, levelCtrl.game.warrior.pos_y)" id="warrior">
+        <img ng-src="/rubywarrior/warriors/1/e1.png" ng-show="levelCtrl.warriorPivot === 0"/>
+        <img ng-src="/rubywarrior/warriors/1/w1.png" ng-show="levelCtrl.warriorPivot === 1"/>
+      </div>
+
+      <div class="effect" id="attack-effect">
+        <img ng-src="/rubywarrior/abilities/attack/crash.png" />
+      </div>
+
+      <div class="effect" id="rest-effect">
+        <img ng-src="/rubywarrior/abilities/rest/bright.png" />
+      </div>
+
+      <div class="effect" id="rescue-effect">
+        <img ng-src="/rubywarrior/abilities/rescue/hand.png" />
+      </div>
+
+      <div class="effect" id="shoot-effect1">
+        <img ng-src="/rubywarrior/abilities/shoot/arrow11.png" />
+      </div>
+
+      <div class="effect" id="shoot-effect3">
+        <img ng-src="/rubywarrior/abilities/shoot/arrow21.png" />
+      </div>
+
+      <div class="effect" id="bow-effect1">
+        <img ng-src="/rubywarrior/abilities/shoot/bow11.png" />
+      </div>
+
+      <div class="effect" id="bow-effect3">
+        <img ng-src="/rubywarrior/abilities/shoot/bow21.png" />
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-7 col-xs-9" style="margin-top: 150px;">
+        <textarea id="codemirror"><%= @file_data.force_encoding("UTF-8") %></textarea>
+      </div>
+      <div class="col-md-5 col-xs-3" style="margin-top: 150px;">
+        <div class="ui big buttons hidden-xs">
+          <button type="button" class="ui inverted blue button letter-ruby" ng-click="levelCtrl.play()">{{levelCtrl.playBtn}}</button>
+          <!-- <div class="or" data-text="o" style="background:#000;"></div> -->
+          <button type="button" class="ui inverted green button letter-ruby" ng-show="levelCtrl.gameOver === true || levelCtrl.readingCode === true" ng-click="levelCtrl.repeat()">Repetir</button>
+          <% unless @next_level.nil?%>
+          <%= link_to "Continuar", "/rubywarrior/warriors/#{@warrior.id}/levels/#{@next_level.id}", :"data-turbolinks" => false, class: "ui inverted red button letter-ruby", "ng-show" => "levelCtrl.levelClear === true" %>
+          <% else %>
+          <button type="button" class="ui inverted yellow button letter-ruby" ng-show="levelCtrl.gameOver === true">Mas niveles pr&oacute;ximamente</button>
+          <% end %>
+        </div>
+
+        <div class="ui vertical buttons mini visible-xs">
+          <button type="button" class="ui inverted blue button" ng-click="levelCtrl.play()">Jugar</button>
+          <!-- <div class="or" data-text="o" style="background:#000;"></div> -->
+          <button type="button" class="ui inverted red button">Continuar</button>
+        </div>
+
+        <div class="row hidden-xs">
+          <div class="col-md-12 game-log" id="game-log" ng-bind-html="levelCtrl.game.log">
+          </div>
+        </div>
+      </div>
+
+      <div class="visible-xs">
+        <div class="col-xs-12 game-log" id="game-log" ng-bind-html="levelCtrl.game.log">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="game-alert" ng-show="levelCtrl.alert.show === true">
+      <p class="letter-ruby shadow title">{{levelCtrl.alert.title}}</p>
+      <p class="letter-normal min_shadow msg">{{levelCtrl.alert.msg}}</p>
+      <br /><br />
+      <button type="button" class="ui inverted red button letter-ruby" ng-click="levelCtrl.alert.show = false">Cerrar</button>
+    </div>
+  </div>
+
+
+
+  <script>
+    Rubywarrior.initialize();
+
+    $('.basic.modal')
+    .modal('setting', 'closable', false)
+    .modal('show')
+    ;
+  </script>

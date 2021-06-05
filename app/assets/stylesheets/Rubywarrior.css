@@ -1,0 +1,147 @@
+.game {
+    background-color: #333;
+}
+
+.game-screen {
+    position: relative;
+}
+
+.game .wall {
+    position: absolute;
+}
+
+.game .wall .part1 {
+    position: absolute;
+    width: 100%;
+}
+
+.game .wall .part2 {
+    position: absolute;
+    width: 100%;
+    top: 19%;
+}
+
+.game .warrior {
+    position: absolute;
+    width: 100px;
+}
+
+.game .warrior img {
+    position: absolute;
+    width: 100%;
+}
+
+.game .unit {
+    position: absolute;
+    width: 100px;
+}
+
+.game .unit img {
+    position: absolute;
+    width: 100%;
+}
+
+.game .effect {
+    position: absolute;
+    width: 100px;
+    display: none;
+}
+
+.game .effect img {
+    position: absolute;
+    width: 100px;
+}
+
+.game .floor {
+    position: absolute;
+}
+
+.game .floor img {
+    position: absolute;
+    width: 100%;
+    top: 19%;
+}
+
+.game .stairs {
+    position: absolute;
+    top: 0;
+}
+
+.game .stairs img {
+    position: absolute;
+    width: 100%;
+}
+
+.level-title {
+    color: orangered;
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.level-warrior-name {
+    color: yellow;
+    font-size: 35px;
+    width: 100%;
+    text-align: center;
+}
+
+.level-description {
+    color: ghostwhite;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.level-tip {
+    color: forestgreen;
+    font-size: 14px;
+    text-align: justify;
+}
+.level-clue {
+    color: yellow;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.game-log {
+    margin-top: 20px;
+    color: aquamarine;
+    padding: 20px;
+    background-color: black;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.game-alert{
+    position: absolute;
+    width: 40%;
+    top: 30%;
+    left: 30%;
+    min-height: 250px;
+    background-color: black;
+    border: 3px solid darkred;
+    padding: 30px;
+    text-align: center;
+}
+
+.game-alert .title{
+    color: darkred;
+    font-size: 30px;
+}
+
+.game-alert .msg{
+    color: yellow;
+    font-size: 20px;
+}
+
+code{
+    color: orangered;
+    border: darkred 1px solid;
+    padding: 5px;
+    background: none;
+    font-size: 16px !important;
+}
+
+.CodeMirror{
+    height: 600px;
+}

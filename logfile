@@ -1,0 +1,230 @@
+LOG:  could not open temporary-files directory "pg_tblspc/.keep/PG_9.3_201306121/pgsql_tmp": Not a directory
+LOG:  could not open tablespace directory "pg_tblspc/.keep/PG_9.3_201306121": Not a directory
+LOG:  database system was shut down at 2015-02-28 00:13:40 COT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "codigoes_dev" does not exist
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 1157) running in data directory "/usr/local/var/postgres"?
+ERROR:  relation "units" does not exist
+STATEMENT:  ALTER TABLE "units" ADD COLUMN "rubywarrior_tower_id" integer
+ERROR:  relation "rubywarrior_towers_units" does not exist
+STATEMENT:  truncate table rubywarrior_towers_units;
+ERROR:  relation "rubywarrior_tower_warrior" does not exist
+STATEMENT:  truncate table rubywarrior_tower_warrior;
+ERROR:  relation "rubywarrior_towers_units" does not exist
+STATEMENT:  truncate table rubywarrior_towers_units;
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  could not open temporary-files directory "pg_tblspc/.keep/PG_9.3_201306121/pgsql_tmp": Not a directory
+LOG:  could not open tablespace directory "pg_tblspc/.keep/PG_9.3_201306121": Not a directory
+LOG:  database system was shut down at 2015-03-05 22:05:29 COT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  could not open temporary-files directory "pg_tblspc/.keep/PG_9.3_201306121/pgsql_tmp": Not a directory
+LOG:  could not open tablespace directory "pg_tblspc/.keep/PG_9.3_201306121": Not a directory
+LOG:  database system was shut down at 2015-03-07 00:08:49 COT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 742) running in data directory "/usr/local/var/postgres"?
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  could not open temporary-files directory "pg_tblspc/.keep/PG_9.3_201306121/pgsql_tmp": Not a directory
+LOG:  could not open tablespace directory "pg_tblspc/.keep/PG_9.3_201306121": Not a directory
+LOG:  database system was shut down at 2015-04-01 18:36:34 COT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  could not open temporary-files directory "pg_tblspc/.keep/PG_9.3_201306121/pgsql_tmp": Not a directory
+LOG:  could not open tablespace directory "pg_tblspc/.keep/PG_9.3_201306121": Not a directory
+LOG:  database system was shut down at 2015-04-03 20:18:00 COT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  could not open temporary-files directory "pg_tblspc/.keep/PG_9.3_201306121/pgsql_tmp": Not a directory
+LOG:  could not open tablespace directory "pg_tblspc/.keep/PG_9.3_201306121": Not a directory
+LOG:  database system was shut down at 2015-05-10 18:21:54 COT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  could not open temporary-files directory "pg_tblspc/.keep/PG_9.3_201306121/pgsql_tmp": Not a directory
+LOG:  could not open tablespace directory "pg_tblspc/.keep/PG_9.3_201306121": Not a directory
+LOG:  database system was shut down at 2015-05-13 00:12:57 COT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  could not open temporary-files directory "pg_tblspc/.keep/PG_9.3_201306121/pgsql_tmp": Not a directory
+LOG:  could not open tablespace directory "pg_tblspc/.keep/PG_9.3_201306121": Not a directory
+LOG:  database system was shut down at 2015-05-14 01:39:59 COT
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+WARNING:  pgstat wait timeout
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary staLOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  could not open temporary-files directory "pg_tblspc/.keep/PG_9.3_201306121/pgsql_tmp": Not a directory
+LOG:  could not open tablespace directory "pg_tblspc/.keep/PG_9.3_201306121": Not a directory
+LOG:  database system was shut down at 2015-05-14 02:38:17 COT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+WARNING:  pgstat wait timeout
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left oLOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  could not open temporary-files directory "pg_tblspc/.keep/PG_9.3_201306121/pgsql_tmp": Not a directory
+LOG:  could not open tablespace directory "pg_tblspc/.keep/PG_9.3_201306121": Not a directory
+LOG:  database system was shut down at 2015-05-14 11:29:26 COT
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  could not open temporary-files directory "pg_tblspc/.keep/PG_9.3_201306121/pgsql_tmp": Not a directory
+LOG:  could not open tablespace directory "pg_tblspc/.keep/PG_9.3_201306121": Not a directory
+LOG:  database system was shut down at 2015-05-14 12:24:19 COT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  could not open temporary-files directory "pg_tblspc/.keep/PG_9.3_201306121/pgsql_tmp": Not a directory
+LOG:  could not open tablespace directory "pg_tblspc/.keep/PG_9.3_201306121": Not a directory
+LOG:  database system was shut down at 2015-05-16 03:36:33 COT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  could not open temporary-files directory "pg_tblspc/.keep/PG_9.3_201306121/pgsql_tmp": Not a directory
+LOG:  could not open tablespace directory "pg_tblspc/.keep/PG_9.3_201306121": Not a directory
+LOG:  database system was shut down at 2015-07-12 17:21:35 COT
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  could not open temporary-files directory "pg_tblspc/.keep/PG_9.3_201306121/pgsql_tmp": Not a directory
+LOG:  could not open tablespace directory "pg_tblspc/.keep/PG_9.3_201306121": Not a directory
+LOG:  database system was interrupted; last known up at 2015-07-19 17:05:05 COT
+LOG:  database system was not properly shut down; automatic recovery in progress
+LOG:  could not open tablespace directory "pg_tblspc/.keep/PG_9.3_201306121": Not a directory
+LOG:  could not open directory "pg_snapshots": No such file or directory
+LOG:  record with zero length at 0/E924A10
+LOG:  redo is not required
+LOG:  could not open tablespace directory "pg_tblspc/.keep/PG_9.3_201306121": Not a directory
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  could not open temporary-files directory "pg_tblspc/.keep/PG_9.3_201306121/pgsql_tmp": Not a directory
+LOG:  could not open tablespace directory "pg_tblspc/.keep/PG_9.3_201306121": Not a directory
+LOG:  database system was shut down at 2015-07-21 23:26:09 COT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "tryruby_dev" does not exist
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down

@@ -1,0 +1,117 @@
+<%= form_for(current_user, url: registration_path(current_user), html: { method: :put }) do |f| %>
+	<div class="col-xs-9 col-sm-5 col-md-4 col-lg-3  col-xs-offset-1 col-md-offset-1">		
+		<div class="row">			
+			<div class="col-md-12">
+				<%#= image_tag("profile.jpg", class: "image_profile_tutorial_index") %>
+
+				<div class="ui link cards" id="card" ng-hide="tutoCtrl.tutorial===true">
+					<div class="card" style="width:100% !important">
+						<div class="images">
+							<%= gravatar_image_tag(current_user.email, :alt => current_user.username, :class => 'image_profile_tutorial_index', :gravatar => { :size => 250})%> <!-- :default => :identicon-->
+						</div>						
+
+						<div class="content">
+							<div class="header"><%= current_user.username %></div>
+							<div class="meta"><%= current_user.profession %></div>
+							<div class="description" style="font-size:12px;">
+								<br/>
+								Nombre: <%= current_user.name %>
+								<div class="ui divided"></div>
+								Correo: <%= current_user.email %>
+								<div class="ui divided"></div>
+								¿Por qué?: <%= current_user.why %>
+								<br/>
+							</div>
+						</div>
+						<div class="extra content">
+							<div class="left floated">					
+								
+								<button type="button" id="edit" class="circular ui inverted orange icon button" ng-click="tutoCtrl.toggleTutorial(tutorial=true)" data-toggle="tooltip" data-placement="top" title="Editar Información" >
+									<i class="edit icon"></i>
+								</button>							
+								
+								<%#= link_to registration_path(current_user), data: { confirm: "¿ Estas Segur@ ?" }, method: :delete, class: "circular ui inverted red icon button" do %>
+									<!-- <i class="remove user icon"></i> -->
+								<%# end %>
+								
+								<%= link_to registration_path(current_user), data: { confirm: "¿ Estas Segur@ ?" }, method: :delete, class: "circular ui inverted red icon button", :"data-toggle"=> "tooltip", :"data-placement"=> "top", :title=>"Cancelar Cuenta" do %>
+									<i class="remove icon"></i>
+								<% end %>					
+							</div>
+							<div class="right floated" style="margin-top:8px;">
+								Unido desde el <%= current_user.created_at.strftime("%Y")  %>
+							</div>
+						</div>
+					</div>
+				</div>			
+			</div>		
+
+
+			<div class="col-md-12" ng-show="tutoCtrl.tutorial===true" style="top:5px ">
+				<div class="ui link cards" id="card">
+					<div class="card" style="width:100% !important">
+						<div class="content">
+							
+							<a class="ui teal ribbon label bottom">Nombre</a>							
+							</br>
+							<%= f.text_field :name, class: "form-control"%>
+							</br>
+
+							<a class="ui teal ribbon label bottom">Nombre de Usuario</a>						
+							</br>
+							<%= f.text_field :username, class: "form-control" %>
+							</br>
+
+							<a class="ui teal ribbon label bottom">Email</a>
+							</br>
+							<%= f.text_field :email, class: "form-control" %>
+							</br>
+							<% if current_user.provider.nil? %>
+								<%= f.label :current_password %>
+								</br>
+								<%= f.password_field :current_password, autocomplete: "off", class: "form-control", id: "inputPassword3" %>
+								</br>
+								<%= f.label :password %>
+								</br>
+				    			<%= f.password_field :password, autocomplete: "off", class: "form-control", id: "inputPassword3"%>
+				    			</br>
+								<%= f.label :password_confirmation %>
+								</br>
+								<%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", id: "inputPassword3" %>
+								</br>
+							<% end %>
+
+							
+							<a class="ui teal ribbon label bottom">Profesión</a>							
+							<br />
+							<%= f.text_field :profession, class: "form-control"%>
+							<br />
+
+							<a class="ui teal ribbon label bottom">¿Por Qué?</a>							
+							<br />
+							<%= f.text_area :why, class: "form-control" %>	
+						</div>
+						<div class="extra content">
+							<div class="left floated">					
+								
+								<button type="submit" class="circular ui inverted blue icon button" data-toggle="tooltip" data-placement="top" title="Guardar">
+									<i class="save icon"></i>
+								</button>
+
+								<button type="button" class="circular ui black basic icon button" ng-click="tutoCtrl.toggleTutorial(tutorial=false)" data-toggle="tooltip" data-placement="top" title="Volver">
+									<i class="arrow left icon"></i>
+								</button>														
+								<%#= link_to registration_path(current_user), data: { confirm: "¿ Estas Segur@ ?" }, method: :delete, class: "circular ui inverted red icon button" do %>
+									<!-- <i class="remove user icon"></i> -->
+								<%# end %>
+							</div>
+							<div class="right floated" style="margin-top:8px;">
+								Unido desde el <%= current_user.created_at.strftime("%Y")  %>
+							</div>
+						</div>
+					</div>			
+				</div>
+			</div>
+		</div>		
+	</div>	
+<% end %>

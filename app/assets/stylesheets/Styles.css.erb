@@ -1,0 +1,672 @@
+/* --------------------------------------- FUENTES ----------------------------------*/
+/*@font-face {
+    font-family: 'MainFont';
+    src: url('/assets/Code_Pro_Demo-webfont.eot');
+    src: url('/assets/Code_Pro_Demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/Code_Pro_Demo-webfont.woff2') format('woff2'),
+         url('/assets/Code_Pro_Demo-webfont.woff') format('woff'),
+         url('/assets/Code_Pro_Demo-webfont.ttf') format('truetype'),
+         url('/assets/Code_Pro_Demo-webfont.svg#code_pro_demoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}*/
+/*FUENTE DE LAS LETRA MOZART Y PRESSTART http://www.fontspace.com/category/8-bit*/
+
+@font-face {
+    font-family: 'SecondaryFont';
+    src: url('<%= asset_path("OpenSans-Regular.ttf") %>') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MainFont';
+    src: url('<%= asset_path("Lobster.otf") %>') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WarriorFont';
+    src: url('<%= asset_path("PressStart2P.ttf") %>') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WarriorNormalFont';
+    src: url('<%= asset_path("MOZART_0.ttf") %>') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* ----------------------------------- LETRAS --------------------------------------*/
+
+.titles-teal {
+    color: #00b5ad !important;
+}
+
+.titles-blue {
+    color: #009fda;
+}
+
+.titles-orange {
+    color: #FF6600;
+    /*color: #FC7A00;*/
+}
+/*--------------------------------------------------------------------------------------*/
+
+body {
+    font-family: 'SecondaryFont' !important;
+    background: #fff !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.main-title {
+    font-family: 'MainFont' !important;
+}
+
+.navbar {
+    background-color: #fff;
+}
+
+.navbar-brand {
+    margin-top: -8px;
+}
+
+.versions {
+    font-size: 18px;
+    text-align: center;
+}
+
+.page-header {
+    text-align: center;
+}
+
+.jumbotron {
+    text-align: justify;
+}
+
+#tutorial-sidemenu {
+    position: fixed;
+}
+
+.markItUp,
+.markItUpEditor {
+    width: 100% !important;
+}
+
+.image_profile_tutorial_index {
+    width: 100% !important;
+    border-radius: 200px;
+}
+
+#footer {
+    z-index: -1;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    height: 200px;
+}
+
+#flash-alerts {
+    position: absolute;
+    top: 50px;
+    left: -20px;
+    z-index: 10000 !important;
+}
+
+.space-button {
+    margin-right: 5px !important;
+}
+
+.space-top {
+    margin-top: 6px !important;
+}
+
+.sh_sourceCode {
+    background-color: #333 !important
+}
+/* --------------------------------------------- RUBY WARRRIOR -----------------------------------------*/
+
+.navbar-warrior {
+    background-color: #000 !important;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #333;
+}
+
+.body-warrior {
+    font-family: 'SecondaryFont' !important;
+    /*background: #040000 !important;*/
+    
+    background: #000 !important;
+}
+
+.container-warrior {
+    background-color: #000000;
+    text-align: center;
+}
+/*.title-warrior {
+	font-family: 'WarriorFont' !important;
+	font-size: 100px;
+	color: #C03D3D;
+	text-shadow: 2px 2px 3px #fff !important;		
+}
+
+.letter-ruby { 
+	font-family: 'WarriorFont' !important;
+	font-size:20px;
+	color: #C03D3D;
+}
+
+.letter-normal
+{
+	font-family: 'WarriorNormalFont' !important;
+	font-size:25px !important;	
+}
+
+.bottom{
+	margin-bottom: 2px !important;	
+}
+
+.input-warrior
+{
+	font-family: 'WarriorFont' !important;
+	font-size:25px;
+	color: #4169E1;		
+	height: 70px;
+	background: black;
+	
+}
+*/
+/* --------------------------------------------- FOREM -----------------------------------------*/
+
+.reply-topic {}
+
+.icon.hide {
+    display: block !important;
+}
+
+.breadcrumb {
+    background: #fff;
+}
+
+.main-font {
+    font-family: 'MainFont';
+    font-size: 15px;
+}
+
+th {
+    font-family: 'MainFont';
+    font-size: 15px;
+}
+
+.active.section {
+    color: #333 !important;
+}
+
+.started-by {
+    font-size: 12px;
+    color: #555;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.latest-post {
+    font-size: 13px;
+}
+
+.description {
+    font-size: 12px;
+}
+
+.subject {
+    font-family: 'MainFont';
+    font-size: 16px;
+}
+
+.campos {
+    font-family: 'MainFont';
+    color: #333;
+}
+
+.space-label {
+    margin-bottom: 2px;
+}
+/*.button-fixed {
+	position: fixed;
+	left: 65%;
+	top: 20%;
+}*/
+/* -------------------------------- MODAL MUNDO 3 EN ADELANTE PARA QUE SE REGISTRE ----------------------*/
+
+.ui.basic.modal {
+    width: 40% !important;
+    overflow: hidden;
+}
+/* --------------------------------- CINTAS LABEL DE LOS FORMULARIOS ----------------------------------*/
+/*PARTE BAJA DE LA CINTA*/
+
+.ui.orange-label.ribbon.label {
+    border-color: #AC3900 !important;
+}
+/*CINTA*/
+
+.ui.orange-label.label {
+    background-color: #FF6600 !important;
+    color: #ffffff !important;
+}
+/* ---------------------------------- COLOR DEL BUTTON BLACK ----------------------------------------*/
+
+.ui.inverted.black.button {
+    box-shadow: 0px 0px 0px 2px #333 inset !important;
+    color: #333 !important;
+}
+
+.ui.inverted.black.button:hover {
+    color: #ffffff !important;
+}
+
+#ensayo:hover {
+    background-color: #C03D3D;
+    text-shadow: 2px 2px 7px #000;
+}
+
+#hvr:hover {
+    text-shadow: 2px 2px 5px #000 !important;
+}
+
+.shadow {
+    text-shadow: 2px 2px 5px #000 !important;
+}
+
+.min_shadow {
+    text-shadow: 1px 1px 4px #000 !important;
+}
+
+#text-red {
+    padding-top: 10px !important;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF695E !important;
+}
+
+#text-green {
+    padding-top: 10px !important;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2ECC40 !important;
+}
+
+.ui.top.attached.tabular.menu {
+    top: 30px;
+}
+
+.active.item {
+    color: #009FDA !important;
+    font-size: 17px !important;
+}
+
+@media (min-width: 992px) {
+    .carousel{
+        margin-top: 90px;
+    }
+    #tutorial-comments {
+        /*Block Comment*/
+        
+        position: fixed;
+        display: none;
+        top: 50px;
+        right: 0px;
+        background-color: #428bca;
+        width: 40%;
+        color: white;
+        overflow-y: auto;
+    }
+    .comments-container {
+        /*Letter*/
+        
+        color: #333;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .comments-container img {
+        /*Image */
+        
+        width: 100px;
+        border-radius: 100px;
+    }
+    .comments-container .to-white {
+        /*Comment's Space*/
+        
+        background-color: #FFF;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    .show-comments {
+        position: fixed;
+        top: 120px;
+        right: -5px;
+    }
+    .write-comment {
+        position: fixed;
+        top: 165px;
+        right: -5px;
+    }
+    #write-comment-up {
+        position: fixed;
+        top: 165px;
+        right: 39.5%;
+        display: none;
+    }
+    .show-contact {
+        position: fixed;
+        top: 165px;
+        right: -5px;
+    }
+    #hide-comments {
+        position: fixed;
+        top: 120px;
+        right: 39.5%;
+        display: none;
+    }
+    #description {
+        font-size: 20px !important;
+    }
+}
+
+@media (min-width: 769px) {
+    /*------------------------------------- GENERAL ------------------------------*/
+    
+    .logo-footer {
+        width: 200px;
+    }
+    .beta-footer {
+        width: 80px;
+    }
+    /*------------------------------------- RUBY WARRIOR --------------------------------*/
+    
+    .table-select-ruby {
+        background: black !important;
+        width: 456px !important;
+    }
+    .image-select-warrior {
+        width: 60px;
+    }
+    .name-warriors {
+        font-family: 'WarriorFont';
+        font-size: 15px;
+        color: yellow;
+    }
+    .lvl-warrior {
+        color: #FF6600 !important;
+    }
+    .title-warrior {
+        font-family: 'WarriorFont' !important;
+        font-size: 100px;
+        color: #C03D3D;
+        text-shadow: 2px 2px 3px #fff !important;
+    }
+    .letter-ruby {
+        font-family: 'WarriorFont' !important;
+        font-size: 20px;
+        color: #C03D3D;
+    }
+    .letter-new {
+        color: yellow;
+        text-shadow: 2px 2px 3px #444;
+    }
+    .letter-normal {
+        font-family: 'WarriorNormalFont' !important;
+        font-size: 25px !important;
+    }
+    .image-warrior-ppal {
+        width: 250px;
+    }
+    .bottom {
+        margin-bottom: 2px !important;
+    }
+    .input-warrior {
+        font-family: 'WarriorFont' !important;
+        font-size: 25px;
+        color: #4169E1;
+        height: 70px;
+        background: black;
+    }
+    /*---------------------------------------------------- FOREM -------------------------------------------*/
+    
+    .buttons-topic {
+        position: fixed;
+        top: 20%;
+        left: 65%;
+        z-index: 100;
+        
+
+    }
+    .button-fixed {
+        position: fixed;
+        left: 65%;
+        top: 20%;
+    }
+}
+
+@media (max-width: 991px) {
+    #tutorial-comments {
+        /*Block Comment*/
+        
+        position: fixed;
+        display: none;
+        top: 50px;
+        right: 0px;
+        background-color: #428bca;
+        width: 85%;
+        color: white;
+        overflow-y: auto;
+    }
+    .comments-container {
+        /*Letter*/
+        
+        color: #333;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .comments-container img {
+        /*Image */
+        
+        width: 40px;
+        border-radius: 100px;
+    }
+    .comments-container .to-white {
+        /*Comment's Space*/
+        
+        background-color: #FFF;
+        height: 80px;
+        padding: 15px;
+        border-radius: 20px;
+    }
+    .show-comments {
+        position: fixed;
+        top: 120px;
+        right: -5px;
+    }
+    .write-comment {
+        position: fixed;
+        top: 165px;
+        right: -5px;
+    }
+    #write-comment-up {
+        position: fixed;
+        top: 165px;
+        left: 10.0%;
+        display: none;
+    }
+    .show-contact {
+        position: fixed;
+        top: 165px;
+        right: -5px;
+    }
+    #hide-comments {
+        position: fixed;
+        top: 120px;
+        left: 10.0%;
+        display: none;
+    }
+    #description {
+        font-size: 10px !important;
+    }
+    #title-name {}
+    /* --------------------------------------- FOREM -------------------------------*/
+    
+    .buttons-topic {
+        position: fixed;
+        top: 20%;
+        left: 93%;
+        z-index: 100;
+        
+
+    }
+    .button-fixed {
+        position: fixed;
+        left: 93%;
+        top: 20%;
+    }
+}
+
+@media (max-width: 768px) {
+    /*--------------------------------- GENERAL -------------------------------*/
+    
+    .logo-footer {
+        width: 100px;
+    }
+    .beta-footer {
+        width: 40px;
+    }
+    .title-pagination {
+        color: black;
+        margin-top: 80px !important;
+    }
+    .list-group-item {
+        font-weight: bold;
+        color: black !important;
+    }
+    .list-group-item:hover {
+        background-color: #428bca !important;
+        color: white !important;
+    }
+    /*------------------------------ RUBY WARRIOR -----------------------------*/
+    
+    .table-select-ruby {
+        background: black !important;
+        width: 270px !important;
+    }
+    .image-select-warrior {
+        width: 30px;
+    }
+    .name-warriors {
+        font-family: 'WarriorFont';
+        color: yellow;
+        font-size: 11px;
+    }
+    .lvl-warrior {
+        color: #FF6600 !important;
+        font-size: 11px !important;
+    }
+    .top-play-warriors {
+        margin-top: 40px !important;
+    }
+    .level-title {
+        font-size: 13px !important;
+    }
+    .title-warrior {
+        padding-top: 50px !important;
+        font-family: 'WarriorFont' !important;
+        font-size: 40px;
+        color: #C03D3D;
+        text-shadow: 2px 2px 3px #fff !important;
+    }
+    .letter-ruby {
+        font-family: 'WarriorFont' !important;
+        font-size: 15px !important;
+        color: #C03D3D;
+    }
+    .letter-new {
+        margin-top: 50px !important;
+        color: yellow;
+        text-shadow: 2px 2px 3px #444;
+    }
+    .letter-normal {
+        font-family: 'WarriorNormalFont' !important;
+        font-size: 15px !important;
+    }
+    .bottom {
+        margin-bottom: 2px !important;
+    }
+    .input-warrior {
+        font-family: 'WarriorFont' !important;
+        font-size: 20px;
+        color: #4169E1;
+        height: 50px;
+        background: black;
+    }
+    .image-warrior-ppal {
+        width: 150px !important;
+    }
+    /* ----------------------------------- FOREM --------------------------------------- */
+    
+    .buttons-topic {
+        position: fixed;
+        top: 20%;
+        left: 92%;
+        z-index: 100;
+        
+
+    }
+    .button-fixed {
+        position: fixed;
+        left: 92%;
+        top: 20%;
+        z-index: 100;
+    }
+    .top-xs {
+        margin-top: 30px !important;
+    }
+    /*   FORMULARIO DE INGRESO*/
+    
+    .input-lg {
+        font-size: 13px !important;
+        height: 30px !important;
+    }
+    .text-xs {
+        font-size: 12px !important;
+    }
+    /* TABLA PRINCIPAL FORMULARIO */
+    
+    .title-foro {
+        font-size: 20px;
+        background-color: #d4d4d5 !important;
+        text-align: center !important;
+        padding: 0px 0px 0px 0px !important;
+    }
+    .main-font {
+        font-size: 13px;
+    }
+    .started-by {
+        font-size: 11px !important;
+    }
+    .subject {
+        font-size: 13px;
+    }
+    .latest-post {
+        font-size: 11px;
+    }
+    p {
+        font-size: 12px !important;
+    }
+}

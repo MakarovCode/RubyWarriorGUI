@@ -1,0 +1,45 @@
+<!--div class="page-header">
+    <h1 class="titles-blue">Nuestros Tutoriales</h1>
+</div-->
+<% @categories = Category.in_menu.each do |category| %>
+<!--div class="ui animated list">
+    <div class="item">
+
+        <img class="ui avatar image" src="<%= category.image %>"/>
+        <div class="content">
+            <div class="header">
+                <h4> <%= category.name %> </h4>
+            </div>
+        </div>
+
+        <ul>
+            <% category.tutorials.each do |tutorial|%>
+            <div class="content">
+
+                <div class="header" style="margin-bottom:2px;">
+
+                    <i class="top aligned right triangle icon"></i>
+                    <%= link_to tutorial.title, tutorial %>
+                    <span class="ui blue tag label mini"><%= tutorial.created_at.strftime("%B %d, %Y") %></span>
+
+
+                </div>
+
+            </div>
+            <% end %>
+
+        </ul>
+    </div>
+</div-->
+<% end %>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+      <div class="item active">
+          <%= image_tag "banner1.png"%>
+      </div>
+      <div class="item">
+          <%= image_tag "banner2.png"%>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<nav class="navbar-warrior navbar-default navbar-fixed-top" role="navigation" style="margin-top: -1px !important;">
+  <div class="container-fluid" >
+    <div class="navbar-header">
+      <a class="navbar-brand" href="javascript:void(0)"><%= image_tag "logotype-white.png", width: 200%></a>
+    </div>
+    <% if user_signed_in? %>
+    <ul class="nav navbar-nav navbar-right" >
+      <li class="hidden-xs">
+        <%= link_to "Ruby Warrior", rubywarrior_warriors_path, :class=> "ui inverted black button space-top", style: "box-shadow: 0px 0px 0px 2px #333 inset !important;" %>
+      </li>
+      <div class="ui section divider visible-xs" style="margin:0px;"></div>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ff6600;" align="center"><%= current_user.email %> <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><%= link_to "Tutoriales", "/tutorials" %></li>
+          <li class="divider visible-xs"></li>
+          <li class="divider"></li>
+          <li><%= link_to "/users/sign_out", {method: :delete} do%><i class="glyphicon glyphicon-off"></i> Salir<% end %></li>
+        </ul>
+      </li>
+    </ul>
+    <% else %>
+    <ul class="nav navbar-nav navbar-right">
+      <div class="ui buttons hidden-xs" style="margin-top:6px;">
+        <%= link_to "Bienvenido!", root_path, :class=> "ui inverted blue button space-button" %>
+        <%= link_to "Ingresar", root_path, :class=> "ui inverted yellow button"%>
+        <div class="or"></div>
+        <%= link_to "Registrarme", new_registration_path(User), class: "ui inverted orange button" %>
+      </div>
+
+      <div class="visible-xs" style="">
+        <ul class="nav navbar-nav navbar-right">
+          <div class="ui section divider" style="margin:0px;"></div>
+          <li class="dropdown" align="center">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ff6600;"> Bienvenido <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Tutoriales", "/tutorials" %></li>
+              <li class="divider"></li>
+              <li class="divider"></li>
+              <li class=""><%= link_to "Ingresar", "/tutorials"%> </li>
+              <li class="divider"></li>
+              <li class="">  <%= link_to "Registrarme", new_registration_path(User)%> </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+
+
+    </ul>
+    <% end %>
+  </div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>

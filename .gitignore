@@ -1,0 +1,19 @@
+test/*
+tmp/*
+log/*
+/config/database.yml
+
+# bundler state
+/.bundle
+/vendor/bundle/
+/vendor/ruby/
+
+config/database.yml
+
+config/database.yml
+
+config/database.yml
+
+config/database.yml
+
+config/initializers/carrierwave.rb

@@ -1,0 +1,35 @@
+<div id="flash-alerts" class="col-md-4">
+<% if !(defined?(resource)).nil? %>
+	<% if (defined?(devise_error_messages!))%>
+		<% if devise_error_messages! != "" ||  devise_error_messages! == nil%>
+			<div class="header-alert alert alert-error" >
+			  <a class="close" data-dismiss="alert">&#215;</a>
+			 	<%= devise_error_messages! %>
+			</div>
+		<% end %>
+	<% end %>
+<% end %>
+<script>
+$(".header-alert").hide();
+</script>
+<% flash.each do |name, msg| %>
+	<% unless msg.nil?%>
+	  <% if msg.is_a?(String) %>
+		 <% if msg != "created" %>
+	    <div class="header-alert alert alert-<%= name == :notice ? "success" : "danger" %>">
+	      <a class="close" data-dismiss="alert">&#215;</a>
+	      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+	    </div>
+		 <% end%>
+		<% elsif msg.is_a?(Array) %>
+			<div class="header-alert alert alert-<%= name == :notice ? "success" : "danger" %>">
+				<a class="close" data-dismiss="alert">&#215;</a>
+				<% msg.each do |ar|%>		    
+			    <%= content_tag :div, ar, :id => "flash_#{name}" %>
+			  <% end %>
+			</div>
+	  <% end %>
+	<% end %>
+<% end %>
+<% flash = nil if flash%>
+</div>
