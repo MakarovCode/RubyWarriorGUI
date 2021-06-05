@@ -17,3 +17,7 @@ config/database.yml
 config/database.yml
 
 config/initializers/carrierwave.rb
+
+Capfile
+config/deploy.rb
+config/deploy/*
